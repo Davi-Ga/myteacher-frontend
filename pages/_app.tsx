@@ -5,9 +5,9 @@ import Cabecalho from '../src/components/Cabecalho/Cabecalho'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Component {...pageProps} />
       <Cabecalho></Cabecalho>
-    <div>Conteudo</div>
+      <Component {...pageProps} />
+  
     </>
   )
 }
