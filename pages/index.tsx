@@ -1,11 +1,14 @@
 import type { NextPage } from 'next'
-import Cabecalho from '../src/components/Cabecalho'
+import Cabecalho from '../src/components/Cabecalho/Cabecalho'
 
 
 
 const Home: NextPage = () => {
   return (
-    <Cabecalho></Cabecalho>
+    <>
+      <Cabecalho></Cabecalho>
+      <div>Conteudo</div>
+    </>
   
   )
 }
