@@ -1,4 +1,4 @@
-import { Box } from '@mui/material'
+import { Box, Dialog, Grid } from '@mui/material'
 import type { NextPage } from 'next'
 import { Professor } from '../src/@types/professor'
 import Lista from '../src/components/Lista/Lista'
@@ -10,9 +10,22 @@ const Home: NextPage = () => {
   const {listaProfessores} = useIndex()
 
   return (
-    <Box sx={{ backgroundColor: 'secondary.main' }}>
-      <Lista professores={listaProfessores}></Lista>
-    </Box>
+    <div>
+      <Box sx={{ backgroundColor: 'secondary.main' }}>
+        <Lista professores={listaProfessores}></Lista>
+      </Box>
+
+      <Dialog open={true} fullWidth PaperProps={{sx: {p:5}}}>
+        <Grid container>
+          <Grid item xs={12}> 
+
+          </Grid>
+          <Grid item xs={12}> 
+
+          </Grid>
+        </Grid>
+      </Dialog>
+    </div>
   )
 }
 
