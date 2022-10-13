@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 
 import { Professor } from "../../@types/professor";
+import { FormatadorService } from "../../services/FormatadorService";
 import { Foto, ItemLista, ListaStyled, Informacao, Nome, Valor, Descricao, ListaVazia } from "./Lista.style";
 
 interface ListaProps {
@@ -21,8 +22,8 @@ const Lista = (props: ListaProps) => {
                             <Foto src={professor.foto}></Foto>
                             <Informacao> 
                                 <Nome>{professor.nome}</Nome>
-                                <Valor>{professor.valor_hora.toLocaleString('pt-BR',{minimumFractionDigits: 2, style: "currency", currency: "BRL"})}</Valor>
-                                <Descricao>{professor.descricao}</Descricao>
+                                <Valor>{FormatadorService.valorMonetario(professor.valor_hora)}</Valor>
+                                <Descricao>{FormatadorService.limitarTexto(professor.descricao,200)}</Descricao>
                                 <Button sx={{ width: '70%'}}>Marcar Aula com {professor.nome}</Button>
                             </Informacao>
                         </ItemLista>
