@@ -1,4 +1,5 @@
 import { Button } from "@mui/material";
+
 import { Professor } from "../../@types/professor";
 import { Foto, ItemLista, ListaStyled, Informacao, Nome, Valor, Descricao, ListaVazia } from "./Lista.style";
 
@@ -7,8 +8,12 @@ interface ListaProps {
 }
 
 const Lista = (props: ListaProps) => {
+    
+
     return(
         <div>
+           
+
             {props.professores.length > 0 ? (
                 <ListaStyled>
                     {props.professores.map(professor => (
