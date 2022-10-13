@@ -3,7 +3,7 @@ import { styled } from "@mui/material";
 
 export const ListaStyled = styled('ul')`
     width: 100%;
-    max-width: 800px;
+    max-width: 750px;
     margin: 0 auto;
     padding: ${({ theme }) => theme.spacing(10, 2, 10, 2)};
     display: grid;
