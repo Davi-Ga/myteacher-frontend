@@ -1,4 +1,4 @@
-  import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Professor } from "../../@types/professor";
 import { ApiService } from "../../services/ApiService";
 
